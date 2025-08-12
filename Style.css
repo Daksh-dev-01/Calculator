@@ -16,12 +16,12 @@ body {
 
 /* Light Mode Gradient */
 body.light-mode {
-    background: linear-gradient(135deg, #a1c4fd, #fbc2eb);
+    background: linear-gradient(135deg, #00d9ff, #ffffff);
 }
 
 /* Dark Mode Gradient */
 body.dark-mode {
-    background: linear-gradient(135deg, #2c3e50, #4b6cb7);
+    background: linear-gradient(135deg, #0080ff, #000000);
 }
 
 /* Calculator Container */
