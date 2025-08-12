@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #000000, #004aad, #00cfff, #004aad, #000000);
+    background-size: 400% 400%;
+    /* animation: gradientBG 10s ease infinite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.5s ease;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Dark Mode Calculator Style ---------------------------------------------------------------------------------------------------------*/
+.calculator {
+    
+    background: linear-gradient(145deg, rgba(0, 0, 50, 0.8), rgba(0, 100, 150, 0.8));
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 25px;
+    width: 420px; /* increased size */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    transition: background 0.5s ease, color 0.5s ease, width 0.3s ease;
+}
+
+.display {
+    width: 100%;
+    height: 100px; /* bigger display */
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    font-size: 2.3rem; /* bigger font */
+    padding: 12px;
+    text-align: right;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 18px; /* bigger buttons */
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: rgba(0,191,255,0.5);
+    transform: scale(1.05);
+}
+
+.equal {
+    grid-column: span 2;
+    background: #00cfff;
+    color: black;
+    font-weight: bold;
+}
+
+.clear {
+    background: #ff4d4d;
+}
+
+/* Light Mode Styles -------------------------------------------------------------------------------------------------------------------*/
+body.light {
+    background: linear-gradient(135deg, #ffffff, #cce7ff);
+}
+
+body.light .calculator {
+    background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(200, 230, 255, 0.9));
+    color: black;
+}
+
+body.light .display {
+    background: rgba(0,0,0,0.1);
+    color: black;
+}
+
+body.light button {
+    background: rgba(0,0,0,0.1);
+    color: black;
+}
+
+body.light button:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: rgba(0,191,255,0.5);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.equal {
+    grid-column: span 2;
+    background: #00cfff;
+    color: black;
+    font-weight: bold;
+}
+
+.clear {
+    background: #ff4d4d;
+}
+
+/* Light Mode Styles */
+body.light {
+    background: linear-gradient(135deg, #ffffff, #cce7ff);
+}
+
+body.light .calculator {
+    background: rgba(0, 0, 0, 0.05);
+    color: black;
+}
+
+body.light .display {
+    background: rgba(0,0,0,0.1);
+    color: black;
+}
+
+body.light button {
+    background: rgba(0,0,0,0.1);
+    color: black;
+}
+
+body.light button:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #00cfff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #004aad;
+    color: white;
+}
