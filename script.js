@@ -50,3 +50,22 @@ function toggleTheme() {
     document.body.classList.toggle('light');
     themeBtn.textContent = document.body.classList.contains('light') ? "Dark Mode" : "Light Mode";
 }
+// Select elements
+const themeToggleBtn = document.querySelector(".theme-toggle");
+const body = document.body;
+
+// Default to light mode on load
+body.classList.add("light-mode");
+
+// Toggle theme when button is clicked
+themeToggleBtn.addEventListener("click", () => {
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        themeToggleBtn.textContent = "Switch to Light Mode";
+    } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        themeToggleBtn.textContent = "Switch to Dark Mode";
+    }
+});
